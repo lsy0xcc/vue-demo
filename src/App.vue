@@ -1,14 +1,16 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <condition-and-list />
+  <parent-component />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import ConditionAndList from "./components/ConditionAndList.vue";
+import ParentComponent from "./components/ParentComponent.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    ConditionAndList,
+    ParentComponent,
   },
 };
 </script>
