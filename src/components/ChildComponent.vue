@@ -20,6 +20,7 @@ export default {
       this.$emit("get-new-num", newNum);
     },
   },
+  emits:["get-new-num"]
 };
 </script>
 <style scoped></style>

@@ -26,7 +26,6 @@ export default {
       this.myData.push(Math.random());
     },
     update(value) {
-      console.log(value);
       this.childData.push(value);
     },
   },
