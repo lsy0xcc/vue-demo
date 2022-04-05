@@ -3,9 +3,13 @@
     <div>myData: {{ myData }}</div>
     <div>childData: {{ childData }}</div>
     <div>
-      <button @click="generate" >click</button>
+      <button @click="generate">click</button>
     </div>
-    <child-component :parent-data="myData" @get-new-num="update"/>
+    <child-component
+      :parent-data="myData"
+      @get-new-num="update"
+      :not-exist-attr="42"
+    />
   </div>
 </template>
 

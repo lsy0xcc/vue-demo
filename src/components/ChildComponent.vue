@@ -1,7 +1,10 @@
 <template>
-  <div>parentData: {{ parentData }}</div>
-  <div>myData: {{ myData }}</div>
-  <div><button @click="generate">click</button></div>
+  <div>
+    <div>parentData: {{ parentData }}</div>
+    <div>myData: {{ myData }}</div>
+    <div><button @click="generate">click</button></div>
+    <div>{{ $attrs }}</div>
+  </div>
 </template>
 <script>
 export default {
@@ -13,6 +16,9 @@ export default {
       myData: [],
     };
   },
+  mounted(){
+    console.log(this.$attrs)
+  }, 
   methods: {
     generate() {
       let newNum = Math.random();
@@ -20,7 +26,7 @@ export default {
       this.$emit("get-new-num", newNum);
     },
   },
-  emits:["get-new-num"]
+  emits: ["get-new-num"],
 };
 </script>
 <style scoped></style>
