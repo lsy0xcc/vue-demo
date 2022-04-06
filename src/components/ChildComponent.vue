@@ -16,17 +16,27 @@ export default {
       myData: [],
     };
   },
-  mounted(){
-    console.log(this.$attrs)
-  }, 
+  mounted() {
+    // console.log(this.$attrs);
+  },
   methods: {
     generate() {
       let newNum = Math.random();
       this.myData.push(newNum);
-      this.$emit("get-new-num", newNum);
+      this.$emit("getNewNum", newNum);
     },
   },
-  emits: ["get-new-num"],
+  emits: {
+    getNewNum(num) {
+      console.log(num);
+      if (num < 0.5) {
+        console.log(num);
+        return false;
+      } else {
+        return true;
+      }
+    },
+  },
 };
 </script>
 <style scoped></style>
